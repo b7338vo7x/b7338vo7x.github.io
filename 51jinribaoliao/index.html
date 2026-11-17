@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51今日爆料-每日大赛热点与爆料条目速览</title>
+<meta name="description" content="51今日爆料聚焦每日大赛的爆料条目、赛程规则与选手动态，整理今日爆料清单、往期热门爆料归档、参赛体验指南与评论区反馈，帮助读者快速看懂比赛节奏与争议焦点。">
+<meta name="keywords" content="51今日爆料">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2a4a'/%3E%3Cpath d='M18 44 28 18l6 14 12-8-8 24H18z' fill='%23f5b53f'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#12202f;
+  --ink-2:#3d4f61;
+  --ink-3:#6b7c8d;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#dcd8cf;
+  --brand:#0f2a4a;
+  --brand-2:#1b4470;
+  --accent:#f5b53f;
+  --accent-2:#c8372d;
+  --mint:#2f7d6b;
+  --radius:10px;
+  --radius-s:6px;
+  --shadow:0 2px 10px rgba(18,32,47,.08);
+  --shadow-lg:0 10px 28px rgba(18,32,47,.14);
+  --fs-h1:clamp(1.7rem,3.4vw,2.55rem);
+  --fs-h2:clamp(1.25rem,2vw,1.55rem);
+  --fs-h3:1.03rem;
+  --gap:20px;
+  --ann-h:40px;
+  --head-h:62px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;color:var(--ink)}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--brand);color:#f2e9d8;font-size:.85rem;
+  line-height:var(--ann-h);height:var(--ann-h);
+  overflow:hidden;
+}
+.announce .wrap{display:flex;align-items:center;gap:10px;height:100%}
+.announce .tag{
+  background:var(--accent);color:#3a2400;font-weight:700;
+  padding:1px 8px;border-radius:4px;font-size:.78rem;flex:none;
+}
+.announce .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.announce a{color:var(--accent);font-weight:600;flex:none}
+header.site{
+  position:sticky;top:var(--ann-h);z-index:55;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(18,32,47,.03);
+}
+.headbar{display:flex;align-items:center;gap:16px;height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .name{font-weight:800;font-size:1.06rem;letter-spacing:.02em;color:var(--brand);white-space:nowrap}
+nav.top{display:flex;gap:2px;flex:1;overflow:hidden}
+nav.top a{
+  padding:7px 10px;border-radius:var(--radius-s);font-size:.9rem;color:var(--ink-2);
+  white-space:nowrap;
+}
+nav.top a:hover{background:#eef1f5;text-decoration:none;color:var(--brand)}
+nav.top a.on{background:var(--brand);color:#fff}
+.head-actions{display:flex;align-items:center;gap:8px;flex:none}
+.search{
+  display:flex;align-items:center;border:1px solid var(--line);
+  border-radius:999px;background:#fff;padding:2px 4px 2px 10px;
+}
+.search input{
+  border:0;outline:0;background:transparent;width:132px;font-size:.86rem;
+  padding:5px 2px;color:var(--ink);
+}
+.search input::placeholder{color:var(--ink-3)}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  width:30px;height:30px;cursor:pointer;display:grid;place-items:center;
+}
+#searchMsg{font-size:.78rem;color:var(--accent-2);display:none;margin-left:6px}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:8px;
+  width:38px;height:36px;cursor:pointer;align-items:center;justify-content:center;
+}
+.menu-btn span{display:block;width:16px;height:2px;background:var(--brand);position:relative}
+.menu-btn span::before,.menu-btn span::after{
+  content:"";position:absolute;left:0;width:16px;height:2px;background:var(--brand);
+}
+.menu-btn span::before{top:-5px}
+.menu-btn span::after{top:5px}
+[id]{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 14px)}
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(1100px 320px at 82% -10%, rgba(245,181,63,.32), transparent 62%),
+    linear-gradient(165deg,#0f2a4a 0%,#163a61 52%,#1b4470 100%);
+  color:#eef2f7;position:relative;overflow:hidden;
+}
+.hero .wrap{display:grid;grid-template-columns:1.35fr .9fr;gap:34px;align-items:center;padding-top:44px;padding-bottom:46px}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(245,181,63,.55);color:var(--accent);
+  font-size:.78rem;letter-spacing:.08em;padding:3px 10px;border-radius:999px;
+}
+.hero h1{color:#fff;font-size:var(--fs-h1);margin:14px 0 12px;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lede{color:#cfdae6;font-size:.98rem;max-width:34em;margin-bottom:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:999px;
+  font-weight:600;font-size:.92rem;border:1px solid transparent;transition:transform .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-main{background:var(--accent);color:#3a2400}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18);padding-top:16px}
+.hero-stats b{display:block;font-size:1.35rem;color:#fff;line-height:1.2}
+.hero-stats span{font-size:.78rem;color:#a9bccf}
+.hero-art{position:relative;height:280px}
+.hero-art svg{width:100%;height:100%}
+/* ---------- section base ---------- */
+main{padding:34px 0 10px}
+section.block{margin-bottom:44px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;border-bottom:2px solid var(--ink);padding-bottom:8px;flex-wrap:wrap}
+.sec-head h2{font-size:var(--fs-h2)}
+.sec-head .hint{font-size:.82rem;color:var(--ink-3)}
+.sec-head a.more{font-size:.84rem;color:var(--brand-2);white-space:nowrap}
+/* overview strip */
+.overview{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.ov-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;box-shadow:var(--shadow);
+}
+.ov-card .n{font-size:1.45rem;font-weight:800;color:var(--brand);line-height:1.15}
+.ov-card .l{font-size:.84rem;color:var(--ink-2);margin-top:3px}
+.ov-card .d{font-size:.75rem;color:var(--ink-3);margin-top:6px}
+/* featured grid */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.feat-grid article{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.feat-grid article:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.feat-grid article.big{grid-column:span 2;grid-row:span 2;flex-direction:row}
+.feat-grid .thumb{width:100%;aspect-ratio:16/9;object-fit:cover}
+.feat-grid article.big .thumb{width:48%;aspect-ratio:auto;height:100%}
+.feat-grid .body{padding:14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tagline{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  font-size:.72rem;padding:1px 8px;border-radius:999px;background:#eaf0f7;color:var(--brand-2);
+  border:1px solid #d7e2ef;
+}
+.chip.warn{background:#fdeceb;color:#a52b22;border-color:#f6cfcb}
+.chip.ok{background:#e7f3ef;color:#20695a;border-color:#cbe6de}
+.feat-grid h3{font-size:1.02rem}
+.feat-grid p{font-size:.85rem;color:var(--ink-2);margin:0}
+.meta{font-size:.76rem;color:var(--ink-3);margin-top:auto;padding-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+/* main + side layout */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:30px;align-items:start}
+.side{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 16px)}
+.side-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:18px;box-shadow:var(--shadow)}
+.side-box h3{font-size:.95rem;margin-bottom:10px;padding-left:9px;border-left:3px solid var(--accent)}
+.side-nav a{display:block;font-size:.88rem;color:var(--ink-2);padding:5px 8px;border-radius:6px;border-left:3px solid transparent}
+.side-nav a:hover{background:#eef1f5;text-decoration:none}
+.side-nav a.active{background:#eaf0f7;color:var(--brand);border-left-color:var(--accent);font-weight:600}
+/* latest list */
+.list-news{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.list-news li{list-style:none;display:flex;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line)}
+.list-news ul{margin:0;padding:0}
+.list-news li:last-child{border-bottom:0}
+.list-news time{font-size:.78rem;color:var(--ink-3);flex:none;width:60px;padding-top:2px}
+.list-news .t{font-size:.92rem}
+.list-news .t b{font-weight:600}
+.list-news .t p{font-size:.82rem;color:var(--ink-2);margin:2px 0 0}
+/* category index */
+.cat-index{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
+.cat-index a{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:12px 13px;color:var(--ink);transition:border-color .16s ease,transform .16s ease;
+}
+.cat-index a:hover{border-color:var(--brand-2);text-decoration:none;transform:translateY(-2px)}
+.cat-index b{display:block;font-size:.93rem;color:var(--brand)}
+.cat-index span{font-size:.76rem;color:var(--ink-3)}
+/* deep reading */
+.deep{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+.deep h2{font-size:var(--fs-h2);margin-bottom:6px}
+.deep .sub{font-size:.84rem;color:var(--ink-3);margin-bottom:18px}
+.deep h3{font-size:1.08rem;margin:22px 0 8px;padding-left:10px;border-left:4px solid var(--brand-2)}
+.deep p{font-size:.94rem;color:#22323f}
+.claim{
+  background:#fbf6e8;border:1px solid #ecd9a6;border-left:4px solid var(--accent);
+  padding:12px 14px;border-radius:0 var(--radius-s) var(--radius-s) 0;margin:14px 0;
+}
+.claim b{color:#7a4f00}
+.verify{width:100%;border-collapse:collapse;font-size:.85rem;margin:14px 0}
+.verify th,.verify td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.verify th{background:#f1f4f8;font-weight:600;color:var(--ink-2)}
+.quote-card{border-left:4px solid var(--mint);background:#f2f8f6;padding:12px 15px;border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:.9rem}
+.quote-card cite{display:block;font-style:normal;font-size:.78rem;color:var(--ink-3);margin-top:6px}
+/* steps */
+.steps{counter-reset:st;display:grid;gap:12px}
+.step{
+  counter-increment:st;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 16px 13px 52px;position:relative;font-size:.9rem;
+}
+.step::before{
+  content:counter(st);position:absolute;left:14px;top:13px;width:26px;height:26px;
+  border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;
+  font-size:.82rem;font-weight:700;
+}
+.step b{color:var(--brand)}
+/* compare panels */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmp{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;background:var(--card)}
+.cmp h3{font-size:.95rem;margin-bottom:8px}
+.cmp.old{border-top:3px solid var(--ink-3)}
+.cmp.new{border-top:3px solid var(--mint)}
+.cmp ul{margin:0;padding-left:1.1em;font-size:.86rem;color:var(--ink-2)}
+/* faq */
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;margin-bottom:10px;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:13px 42px 13px 16px;font-weight:600;font-size:.94rem;position:relative;list-style:none;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:1.2rem;color:var(--brand-2);font-weight:400;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 16px 14px;font-size:.88rem;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
+/* comments */
+.comments{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;font-size:.88rem}
+.cmt .who{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--ink-3);margin-bottom:6px}
+.cmt .av{width:24px;height:24px;border-radius:50%;background:var(--brand-2);color:#fff;display:grid;place-items:center;font-size:.7rem;flex:none}
+.cmt p{margin:0;color:#243544}
+.cmt .on{color:var(--brand-2);font-weight:600}
+/* timeline */
+.timeline{position:relative;padding-left:22px;border-left:2px solid var(--line);display:grid;gap:16px}
+.tl-item{position:relative}
+.tl-item::before{
+  content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--card);box-shadow:0 0 0 1px var(--line);
+}
+.tl-item time{font-size:.76rem;color:var(--accent-2);font-weight:700}
+.tl-item p{font-size:.87rem;color:var(--ink-2);margin:2px 0 0}
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:6px 14px;font-size:.84rem;color:var(--ink-2);
+}
+.tags a:hover{border-color:var(--brand-2);color:var(--brand);text-decoration:none}
+/* ranking */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank ol{margin:0;padding:0;list-style:none}
+.rank li{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);align-items:flex-start}
+.rank li:last-child{border-bottom:0}
+.rank .num{font-weight:800;color:var(--brand-2);width:24px;flex:none;font-size:1rem}
+.rank .rk-t{font-size:.9rem}
+.rank .rk-t span{display:block;font-size:.78rem;color:var(--ink-3)}
+.rank .bar{margin-left:auto;font-size:.78rem;color:var(--mint);white-space:nowrap}
+/* footer */
+footer.site{background:#0d1f33;color:#b9c8d6;margin-top:20px;padding:36px 0 22px;font-size:.86rem}
+footer.site .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:24px}
+footer.site h4{color:#fff;font-size:.92rem;margin-bottom:10px}
+footer.site a{color:#b9c8d6;font-size:.84rem;display:block;padding:2px 0}
+footer.site a:hover{color:var(--accent)}
+footer.site .fpos{color:#8fa6ba;font-size:.82rem;margin-top:8px;line-height:1.65}
+footer .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:#8095a8}
+#toTop{
+  position:fixed;right:16px;bottom:18px;z-index:70;width:42px;height:42px;border-radius:50%;
+  border:0;background:var(--brand);color:#fff;cursor:pointer;box-shadow:var(--shadow-lg);
+  display:none;place-items:center;font-size:1rem;
+}
+#toTop.show{display:grid}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* responsive */
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;gap:18px}
+  .hero-art{height:200px;max-width:420px}
+  .cols{grid-template-columns:1fr}
+  .side{position:static;order:2}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid article.big{grid-column:span 2;grid-row:auto;flex-direction:column}
+  .feat-grid article.big .thumb{width:100%;aspect-ratio:16/9;height:auto}
+  .overview{grid-template-columns:repeat(2,1fr)}
+  footer.site .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  nav.top{
+    position:absolute;top:var(--head-h);left:0;right:0;background:#fff;flex-direction:column;
+    padding:8px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);display:none;
+  }
+  nav.top.open{display:flex}
+  .menu-btn{display:flex}
+  .search input{width:88px}
+  .headbar{gap:10px}
+  .brand .name{font-size:.98rem}
+  .comments,.compare{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .cat-index{grid-template-columns:repeat(2,1fr)}
+  .deep{padding:18px 16px}
+  .hero-stats{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.feat-grid article:hover,.cat-index a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <div class="wrap">
+    <span class="tag">今日更新</span>
+    <span class="txt">11月8日 每日大赛第37赛段名单已公示 · 今日爆料清单新增9条 · 争议裁决说明对外公开</span>
+    <a href="#latest">查看更新</a>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap headbar">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" role="img" aria-label="51今日爆料 图形标志">
+        <rect width="64" height="64" rx="14" fill="#0f2a4a"/>
+        <path d="M16 46 27 17l6 15 13-9-9 23H16z" fill="#f5b53f"/>
+        <circle cx="47" cy="17" r="6.5" fill="#ff5a5f"/>
+      </svg>
+      <span class="name">51今日爆料</span>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="topNav" aria-label="打开主题导航">
+      <span></span>
+    </button>
+    <nav class="top" id="topNav" aria-label="主题导航">
+      <a href="#overview">赛事概览</a>
+      <a href="#latest">最新更新</a>
+      <a href="#cats">分类入口</a>
+      <a href="#deep">深度解析</a>
+      <a href="#guide">体验指南</a>
+      <a href="#comments">评论区</a>
+      <a href="#rank">热度榜</a>
+    </nav>
+    <div class="head-actions">
+      <div class="search" role="search">
+        <input id="q" type="search" placeholder="搜爆料条目 / 选手 / 规则" aria-label="站内搜索">
+        <button id="searchBtn" aria-label="搜索">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        </button>
+      </div>
+      <span id="searchMsg" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">每日大赛 · 第37赛段</span>
+      <h1>51今日爆料<em>｜每日大赛当日清单</em></h1>
+      <p class="lede">每天上午10点前汇总前一日赛程变动、选手状态与争议裁决，只保留可核对的条目：谁提交了什么、哪条规则在第几场生效、申诉卡在了哪一步。清单按时间与可信度分层，评论区分开事实与个人判断。</p>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="#latest">看今日爆料清单</a>
+        <a class="btn btn-ghost" href="#deep">读第37赛段深度解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>9</b><span>11月8日新增条目</span></div>
+        <div><b>37</b><span>当前赛段编号</span></div>
+        <div><b>4</b><span>未裁决申诉</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 280" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f5b53f" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#ff5a5f" stop-opacity=".85"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="26" width="250" height="150" rx="12" fill="#0d1f33" stroke="#2c4f75"/>
+        <rect x="32" y="42" width="86" height="10" rx="5" fill="#f5b53f"/>
+        <rect x="32" y="62" width="190" height="7" rx="3.5" fill="#3f668f"/>
+        <rect x="32" y="78" width="164" height="7" rx="3.5" fill="#3f668f"/>
+        <rect x="32" y="94" width="204" height="7" rx="3.5" fill="#2f5177"/>
+        <rect x="32" y="110" width="130" height="7" rx="3.5" fill="#2f5177"/>
+        <circle cx="300" cy="64" r="34" fill="none" stroke="url(#g1)" stroke-width="8"/>
+        <path d="M288 64l9 9 17-19" fill="none" stroke="#f5b53f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="288" y="120" width="112" height="56" rx="10" fill="#12283f" stroke="#2c4f75"/>
+        <rect x="300" y="134" width="52" height="8" rx="4" fill="#ff5a5f"/>
+        <rect x="300" y="150" width="84" height="6" rx="3" fill="#3f668f"/>
+        <rect x="288" y="192" width="112" height="34" rx="8" fill="#12283f" stroke="#2c4f75"/>
+        <rect x="300" y="204" width="66" height="7" rx="3.5" fill="#f5b53f"/>
+        <path d="M40 210h240" stroke="#2c4f75" stroke-width="2" stroke-dasharray="6 8"/>
+        <circle cx="60" cy="210" r="6" fill="#f5b53f"/>
+        <circle cx="120" cy="210" r="6" fill="#3f668f"/>
+        <circle cx="184" cy="210" r="6" fill="#ff5a5f"/>
+        <circle cx="244" cy="210" r="6" fill="#3f668f"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 概览 -->
+  <section class="block" id="overview" aria-labelledby="ov-h">
+    <div class="sec-head">
+      <h2 id="ov-h">赛事概览：第37赛段的规模与节奏</h2>
+      <span class="hint">数据截至 11月8日 09:40</span>
+    </div>
+    <div class="overview">
+      <div class="ov-card"><div class="n">312</div><div class="l">本赛段报名选手</div><div class="d">较第36赛段 +18 人</div></div>
+      <div class="ov-card"><div class="n">46</div><div class="l">今日已提交对局</div><div class="d">其中 3 场申请复议</div></div>
+      <div class="ov-card"><div class="n">12</div><div class="l">裁判组在岗人数</div><div class="d">含 2 名规则复核员</div></div>
+      <div class="ov-card"><div class="n">6.5h</div><div class="l">单日赛程平均时长</div><div class="d">较上周缩短 40 分钟</div></div>
+    </div>
+  </section>
+
+  <!-- 精选推荐 -->
+  <section class="block" id="featured" aria-labelledby="ft-h">
+    <div class="sec-head">
+      <h2 id="ft-h">精选爆料：今天值得先看的三条</h2>
+      <a class="more" href="#latest">全部更新 →</a>
+    </div>
+    <div class="feat-grid">
+      <article class="big">
+        <img class="thumb" src="https://picsum.photos/seed/daily-arena-37/640/520" width="640" height="520" loading="lazy" alt="第37赛段主舞台对阵板，显示红蓝两组选手编号">
+        <div class="body">
+          <div class="tagline"><span class="chip warn">争议中</span><span class="chip">淘汰赛</span></div>
+          <h3>第37赛段C组第二轮：暂停计时申诉改判，比分回到 11:9</h3>
+          <p>11月7日21:14，C组第二轮在暂停阶段出现计时争议。裁判组11月8日08:30发布的《裁决说明第37-04号》认定暂停期间计入的12秒无效，比分由11:10改回11:9。选手编号C-07提出的重赛请求被驳回，理由是对局结果未受实质影响。</p>
+          <div class="meta"><span>来源：裁判组公告第37-04号</span><span>11月8日 08:30</span></div>
+        </div>
+      </article>
+      <article>
+        <img class="thumb" src="https://picsum.photos/seed/ruleset-v9-doc/480/270" width="480" height="270" loading="lazy" alt="规则手册第9版封面与批注页">
+        <div class="body">
+          <div class="tagline"><span class="chip">规则</span></div>
+          <h3>规则手册第9版生效：装备检查从赛前30分钟提前到45分钟</h3>
+          <p>新版第4.2条把装备检查窗口前移，迟到者按弃权处理。11月6日首日有5人踩线。</p>
+          <div class="meta"><span>11月6日</span></div>
+        </div>
+      </article>
+      <article>
+        <img class="thumb" src="https://picsum.photos/seed/player-practice-log/480/270" width="480" height="270" loading="lazy" alt="选手训练日志本与手写时间分配表">
+        <div class="body">
+          <div class="tagline"><span class="chip ok">已核实</span></div>
+          <h3>选手A-12训练日志公开：连续7天日均练习4小时20分</h3>
+          <p>日志由队内助理上传，含每日时段与复盘截图，与提交记录基本吻合。</p>
+          <div class="meta"><span>11月7日</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 主体双栏 -->
+  <div class="cols">
+    <div>
+
+      <!-- 最新更新 -->
+      <section class="block" id="latest" aria-labelledby="lt-h">
+        <div class="sec-head">
+          <h2 id="lt-h">最新更新：11月8日逐条清单</h2>
+          <span class="hint">按发布时间排序</span>
+        </div>
+        <div class="list-news">
+          <ul>
+            <li><time>09:40</time><div class="t"><b>B组对阵表微调</b><p>B-04与B-11的对局由14:00挪到15:20，原因是场馆2号台设备更换。</p></div></li>
+            <li><time>09:05</time><div class="t"><b>装备检查补检名单</b><p>11月6日踩线的5人已完成补检，其中1人外设型号与申报不符，需重新登记。</p></div></li>
+            <li><time>08:30</time><div class="t"><b>裁决说明第37-04号发布</b><p>C组第二轮计时争议改判，比分回到11:9，重赛请求驳回。</p></div></li>
+            <li><time>07:55</time><div class="t"><b>裁判排班调整</b><p>原定执裁第9场的裁判长调至复核岗，由第2组裁判顶替，涉3场比赛。</p></div></li>
+            <li><time>昨天 22:10</time><div class="t"><b>选手C-07申诉材料提交</b><p>共14页，含录屏与时间轴标注，等待规则复核员答复。</p></div></li>
+            <li><time>昨天 20:36</time><div class="t"><b>第36赛段奖金发放完成</b><p>前16名到账，第17名因账号信息有误仍在核对。</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="cats" aria-labelledby="ct-h">
+        <div class="sec-head">
+          <h2 id="ct-h">分类入口：按你关心的方向进</h2>
+        </div>
+        <div class="cat-index">
+          <a href="#deep"><b>赛程与对阵</b><span>每日对局表、场地与时段</span></a>
+          <a href="#guide"><b>参赛报名流程</b><span>资格、材料与截止时间</span></a>
+          <a href="#guide"><b>装备检查规则</b><span>第9版差异与补检</span></a>
+          <a href="#comments"><b>选手状态与训练</b><span>日志、公开数据与自述</span></a>
+          <a href="#deep"><b>争议裁决记录</b><span>编号、依据与是否改判</span></a>
+          <a href="#rank"><b>每日大赛热度榜</b><span>条目阅读与讨论量</span></a>
+          <a href="#timeline"><b>规则版本变更</b><span>第8版到第9版的条目差</span></a>
+          <a href="#faq"><b>观赛与新手指南</b><span>术语、流程与常见误解</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block deep" id="deep" aria-labelledby="dp-h">
+        <h2 id="dp-h">深度解析：每日大赛的争议为什么集中在计时与装备两条线上</h2>
+        <p class="sub">依据：第37-04号裁决说明、规则手册第9版第4.2条、11月6日至8日公开申诉材料</p>
+
+        <p>把第36、37两个赛段合计31起申诉按类型拆开，计时类14起，装备类9起，选手身份类4起，其余4起为场地与设备。计时与装备加起来占七成四，这个比例连续三周没有明显变化。裁判组在11月8日说明会上的解释是：这两类都能被录屏与时间戳直接验证，所以申诉门槛低、提交量自然高。</p>
+
+        <div class="claim">
+          <b>可以引用的判断：</b>计时争议的高发不是因为规则写得模糊，而是因为规则写得足够细。第9版把暂停计时精确到秒，并且要求裁判手动记录两次，人为秒差反而成了主要争议源。
+        </div>
+
+        <h3>证据一：暂停计时的两次人工记录差</h3>
+        <p>第37-04号说明第2页贴出了一张原始记录表。同一段暂停，主裁记 48 秒，边裁记 60 秒，相差 12 秒。正是这 12 秒被计入了C组第二轮的有效时间，导致比分从11:9推进到11:10。改判依据是边裁记录与场馆回放帧数对不上，回放显示暂停实际持续 47.6 秒。</p>
+
+        <table class="verify">
+          <caption class="sr-only">C组第二轮计时争议核对表</caption>
+          <thead><tr><th>核对项</th><th>原记录</th><th>复核结果</th></tr></thead>
+          <tbody>
+            <tr><td>暂停起止时间</td><td>21:14:06 — 21:15:06</td><td>21:14:06 — 21:14:53.6</td></tr>
+            <tr><td>计入有效时间</td><td>60 秒</td><td>47.6 秒</td></tr>
+            <tr><td>比分影响</td><td>11:10</td><td>11:9</td></tr>
+            <tr><td>记录人</td><td>主裁、边裁各一份</td><td>以回放帧为准</td></tr>
+          </tbody>
+        </table>
+
+        <p>这里的事实是记录差存在，回应是裁判组承认人工计时精度不足并承诺第38赛段启用双机自动计时；转述部分来自选手C-07的申诉材料，其称“暂停指令下达后没有任何口头倒数”；推测部分则是一些观众认为改判会削弱先手优势，这一点目前没有数据支撑，因为改判后对局实际只进行了约两分钟。</p>
+
+        <h3>证据二：装备检查提前15分钟后的迟到数据</h3>
+        <p>规则手册第9版第4.2条把装备检查窗口从赛前30分钟提前到45分钟。11月6日首日，312名参赛者里有5人在窗口关闭后到达检查台，按条目原文被判定为弃权。11月7日降到2人，11月8日上午为0人。三天数据没到能证明习惯已改的程度，但至少说明提前通知是有效的。</p>
+
+        <div class="quote-card">
+          “我们不是不接受检查，是不知道窗口提前了。11月5日晚的群通知我只看到赛程表那一条。”——选手B-11在11月7日评论区的留言
+          <cite>来源：选手评论区，11月7日 18:22</cite>
+        </div>
+
+        <h3>证据三：规则版本前后变化带来的争议位移</h3>
+        <p>第8版对装备的要求写在附件里，检查由场馆自行安排；第9版把它提到正文第4.2条，并明确弃权后果。规则的能见度提高之后，装备类申诉数量反而从第36赛段的5起升到第37赛段的9起。一个合理解释是：规则进入正文后，参赛者更清楚哪些情况可以申诉。</p>
+
+        <div class="compare">
+          <div class="cmp old">
+            <h3>规则手册第8版</h3>
+            <ul>
+              <li>装备检查写入附件三，未列时限</li>
+              <li>未通过检查按“当场处理”，无统一结论</li>
+              <li>申诉由场馆负责人初审</li>
+            </ul>
+          </div>
+          <div class="cmp new">
+            <h3>规则手册第9版</h3>
+            <ul>
+              <li>正文第4.2条，赛前45分钟关闭窗口</li>
+              <li>未通过检查按弃权判定，须书面告知</li>
+              <li>申诉由规则复核员统一受理，5个工作时段内答复</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>把三组证据放在一起，计时与装备两条线的争议本质不同。计时是执行精度问题，靠设备升级可以压下去；装备是信息触达问题，靠通知渠道与确认机制才能解决。第37-04号说明只回答了前者，对11月5日群通知是否有效等问题没有给出结论，这一块仍是空的。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide" aria-labelledby="gd-h">
+        <div class="sec-head">
+          <h2 id="gd-h">体验指南：第一次参加每日大赛要过的五道流程</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><b>报名与资格核对。</b>第37赛段报名在11月2日18:00关闭，共312人。需要提交身份信息与历史参赛编号，重复报名会被系统退回。</div>
+          <div class="step"><b>装备申报。</b>按第9版第4.2条，外设型号、固件版本必须与实物一致。11月6日有1人因型号不符重新登记。</div>
+          <div class="step"><b>赛前45分钟到场检查。</b>超时按弃权处理，没有例外通道。建议提前一小时到，留出排队余量。</div>
+          <div class="step"><b>对局与申诉。</b>争议需在赛后30分钟内提交，附录屏与时间轴。11月7日的申诉在22:10提交，属于卡线。</div>
+          <div class="step"><b>结果确认。</b>比分与裁决会在次日上午公示，改判会单独编号，如第37-04号。</div>
+        </div>
+        <p style="margin-top:12px;font-size:.86rem;color:var(--ink-3)">补充说明：第38赛段的报名预计11月15日开放，具体时段以赛程公告为准；新选手建议先看第8版到第9版的变化对照，避免按旧习惯准备。</p>
+      </section>
+
+      <!-- 时间线 -->
+      <section class="block" id="timeline" aria-labelledby="tl-h">
+        <div class="sec-head">
+          <h2 id="tl-h">时间线：第37赛段最近三天的关键节点</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item"><time>11月6日 08:15</time><p>规则手册第9版生效，首批装备检查开始，5人超时被判弃权。</p></div>
+          <div class="tl-item"><time>11月6日 19:40</time><p>A组首轮全部结束，无申诉提交。</p></div>
+          <div class="tl-item"><time>11月7日 21:14</time><p>C组第二轮暂停计时争议发生，主裁与边裁记录相差12秒。</p></div>
+          <div class="tl-item"><time>11月7日 22:10</time><p>选手C-07提交14页申诉材料。</p></div>
+          <div class="tl-item"><time>11月8日 08:30</time><p>裁决说明第37-04号发布，比分改回11:9，重赛请求驳回。</p></div>
+          <div class="tl-item"><time>11月8日 09:40</time><p>B组两场对局时段调整，场馆2号台设备更换完成。</p></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq" aria-labelledby="fq-h">
+        <div class="sec-head">
+          <h2 id="fq-h">常见问题：规则、申诉与观赛</h2>
+        </div>
+        <details class="faq" open>
+          <summary>每日大赛的暂停计时为什么会被申诉？</summary>
+          <div class="ans">第9版规则要求暂停时长精确到秒，并规定暂停期间不计入有效对局时间。实际操作中主裁与边裁各记一份，两份记录相差数秒时就会直接影响比分。第37-04号说明里的12秒差就是这么产生的。</div>
+        </details>
+        <details class="faq">
+          <summary>装备检查提前到赛前45分钟，迟到一定判弃权吗？</summary>
+          <div class="ans">按规则手册第9版第4.2条，窗口关闭后到达检查台的参赛者按弃权处理，没有补检通道。11月6日有5人因此弃权，11月7日2人，11月8日上午为0人。若因场馆原因导致排队超时，可当场向裁判长登记。</div>
+        </details>
+        <details class="faq">
+          <summary>申诉材料需要包含哪些内容？</summary>
+          <div class="ans">录屏、明确的时间轴标注、争议发生时的比分与局数。11月7日C-07提交的材料共14页，其中时间轴标注占了6页。材料需在赛后30分钟内提交，规则复核员在5个工作时段内答复。</div>
+        </details>
+        <details class="faq">
+          <summary>第38赛段的报名什么时候开？</summary>
+          <div class="ans">按赛程安排预计11月15日开放，具体时段与名额以届时的赛程公告为准。第37赛段报名在11月2日18:00关闭，共312人，可作为参考规模。</div>
+        </details>
+      </section>
+
+      <!-- 评论 -->
+      <section class="block" id="comments" aria-labelledby="cm-h">
+        <div class="sec-head">
+          <h2 id="cm-h">评论区：关于第37赛段与今日爆料的现场反馈</h2>
+          <span class="hint">筛选自公开留言，保留不同立场</span>
+        </div>
+        <div class="comments">
+          <div class="cmt">
+            <div class="who"><span class="av">B</span>B-11 · 11月7日 18:22</div>
+            <p>群通知我只看到赛程表那一条，<span class="on">装备检查从30分钟改成45分钟</span>写在后面几行，第二天就踩线了。建议把这条单独置顶。</p>
+          </div>
+          <div class="cmt">
+            <div class="who"><span class="av">C</span>C-07 · 11月8日 09:12</div>
+            <p>改判我接受，比分确实回到11:9。<span class="on">但重赛请求被驳回的理由是“未受实质影响”</span>，这个标准希望写进规则，不然下次还是各说各话。</p>
+          </div>
+          <div class="cmt">
+            <div class="who"><span class="av">观</span>看台老周 · 11月8日 09:31</div>
+            <p>两分钟的对局改判，讨论量比整轮比赛都高。<span class="on">第37-04号那页记录表倒是挺实在</span>，主裁边裁两个数并排放着，这种公开方式可以多一点。</p>
+          </div>
+          <div class="cmt">
+            <div class="who"><span class="av">A</span>A-12 · 11月7日 21:05</div>
+            <p>训练日志公开之后有人问我是不是在作秀。<span class="on">4小时20分里有1小时是对着回放看自己的失误</span>，这个部分日志里都标了，愿意看的自己去看。</p>
+          </div>
+          <div class="cmt">
+            <div class="who"><span class="av">新</span>新选手小许 · 11月8日 10:02</div>
+            <p>第一次准备报名，<span class="on">最想知道的是装备申报表长什么样</span>，分类入口里那条点进去只有规则条文，没有样例。这条算吐槽。</p>
+          </div>
+          <div class="cmt">
+            <div class="who"><span class="av">复</span>复核员老孟 · 11月8日 10:18</div>
+            <p>5个工作时段答复是底线，不是目标。<span class="on">11月7日那份14页材料我们看了三遍</span>，时间轴标得清楚，答复就快。材料越乱，越慢。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="nw-h">
+        <div class="sec-head">
+          <h2 id="nw-h">相关资讯：赛事之外的公开信息</h2>
+        </div>
+        <div class="list-news">
+          <ul>
+            <li><time>11月8日</time><div class="t"><b>场馆2号台设备更换完成</b><p>更换后对局时段顺延，B组两场对局受影响，详见最新更新09:40条目。</p></div></li>
+            <li><time>11月7日</time><div class="t"><b>第36赛段奖金到账</b><p>前16名完成发放，第17名账号信息待核对。奖金明细未公开名单，只公示了总额。</p></div></li>
+            <li><time>11月6日</time><div class="t"><b>规则手册第9版纸质版领取</b><p>场馆入口处可领，共印200册。批注页可自行填写，不影响正式条文。</p></div></li>
+            <li><time>11月5日</time><div class="t"><b>裁判组扩充2名规则复核员</b><p>复核岗由1人增至3人，答复周期从7个工作日缩短到5个工作时段。</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="rec" aria-labelledby="rc-h">
+        <div class="sec-head">
+          <h2 id="rc-h">相关推荐：这些条目也常被搜到</h2>
+        </div>
+        <div class="tags">
+          <a href="#deep">每日大赛计时争议改判</a>
+          <a href="#guide">每日大赛装备检查45分钟</a>
+          <a href="#deep">规则手册第9版变化</a>
+          <a href="#comments">选手C-07申诉材料</a>
+          <a href="#timeline">每日大赛第37赛段时间线</a>
+          <a href="#guide">每日大赛报名资格</a>
+          <a href="#rank">每日大赛热度榜</a>
+          <a href="#faq">规则复核员答复周期</a>
+          <a href="#latest">11月8日爆料清单</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="侧栏导航与热度榜">
+      <div class="side-box">
+        <h3>栏目导航</h3>
+        <nav class="side-nav" id="sideNav" aria-label="侧栏栏目导航">
+          <a href="#overview">赛事概览</a>
+          <a href="#featured">精选爆料</a>
+          <a href="#latest">最新更新</a>
+          <a href="#cats">分类入口</a>
+          <a href="#deep">深度解析</a>
+          <a href="#guide">体验指南</a>
+          <a href="#timeline">时间线</a>
+          <a href="#faq">常见问题</a>
+          <a href="#comments">评论区</a>
+          <a href="#news">相关资讯</a>
+          <a href="#rec">相关推荐</a>
+        </nav>
+      </div>
+      <div class="side-box" id="rank">
+        <h3>今日热度榜</h3>
+        <div class="rank">
+          <ol>
+            <li><span class="num">1</span><span class="rk-t">计时申诉改判<span>第37-04号 · 11月8日</span></span><span class="bar">讨论 218</span></li>
+            <li><span class="num">2</span><span class="rk-t">装备检查提前15分钟<span>第9版第4.2条</span></span><span class="bar">讨论 164</span></li>
+            <li><span class="num">3</span><span class="rk-t">C-07申诉材料14页<span>11月7日</span></span><span class="bar">讨论 121</span></li>
+            <li><span class="num">4</span><span class="rk-t">A-12训练日志<span>连续7天4小时20分</span></span><span class="bar">讨论 96</span></li>
+            <li><span class="num">5</span><span class="rk-t">规则手册第9版对照<span>第8版到第9版</span></span><span class="bar">讨论 73</span></li>
+          </ol>
+        </div>
+        <p style="font-size:.75rem;color:var(--ink-3);margin:10px 0 0">热度按站内阅读与引用次数折算，非官方排名。</p>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px">
+          <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1b4470"/>
+            <path d="M16 46 27 17l6 15 13-9-9 23H16z" fill="#f5b53f"/>
+            <circle cx="47" cy="17" r="6.5" fill="#ff5a5f"/>
+          </svg>
+          <strong style="color:#fff;font-size:1rem">51今日爆料</strong>
+        </div>
+        <p class="fpos">每天整理可核对的赛事信息：谁在什么时间提交了什么，哪条规则在第几场生效，申诉卡在哪一步。清单与判断分开摆放。</p>
+      </div>
+      <div>
+        <h4>赛程与规则</h4>
+        <a href="#latest">11月8日更新清单</a>
+        <a href="#deep">计时争议解析</a>
+        <a href="#timeline">第37赛段时间线</a>
+        <a href="#guide">装备检查流程</a>
+      </div>
+      <div>
+        <h4>参与与反馈</h4>
+        <a href="#guide">报名与资格</a>
+        <a href="#faq">申诉材料要求</a>
+        <a href="#comments">评论区留言</a>
+        <a href="#rec">相关推荐</a>
+      </div>
+      <div>
+        <h4>数据说明</h4>
+        <a href="#rank">热度榜口径</a>
+        <a href="#overview">赛段数据统计</a>
+        <a href="#news">公开信息归档</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>示例数据说明：页面中的选手编号、比分、申诉编号与时间均为演示内容，赛事数据以官方公示为准。</span>
+      <span>更新于 2026年11月8日 10:20 · 对应正文最新更新与热度榜条目</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var topNav=document.getElementById('topNav');
+  if(menuBtn&&topNav){
+    menuBtn.addEventListener('click',function(){
+      var open=topNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+      menuBtn.setAttribute('aria-label',open?'收起主题导航':'打开主题导航');
+    });
+    topNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=720){
+        topNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var q=document.getElementById('q');
+  var sBtn=document.getElementById('searchBtn');
+  var msg=document.getElementById('searchMsg');
+  function doSearch(){
+    var kw=(q.value||'').trim().toLowerCase();
+    if(!kw){msg.style.display='none';return;}
+    var hit=null;
+    var nodes=document.querySelectorAll('main h2, main h3, main .t b, main summary, .tags a, .cat-index b');
+    for(var i=0;i<nodes.length;i++){
+      if(nodes[i].textContent.toLowerCase().indexOf(kw)>-1){hit=nodes[i];break;}
+    }
+    if(!hit){
+      var all=document.querySelectorAll('main p, main li');
+      for(var j=0;j<all.length;j++){
+        if(all[j].textContent.toLowerCase().indexOf(kw)>-1){hit=all[j];break;}
+      }
+    }
+    if(hit){
+      msg.style.display='none';
+      var target=hit.closest('section')||hit;
+      if(target.id){location.hash='#'+target.id;}
+      else{hit.scrollIntoView({behavior:'smooth',block:'center'});}
+      hit.style.transition='background-color .4s';
+      hit.style.backgroundColor='#fdf3d6';
+      setTimeout(function(){hit.style.backgroundColor='';},1600);
+    }else{
+      msg.textContent='没有找到“'+q.value.trim()+'”，试试“计时”“装备检查”或“申诉”。';
+      msg.style.display='inline';
+    }
+  }
+  if(sBtn){sBtn.addEventListener('click',doSearch);}
+  if(q){q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});}
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>520){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function onScroll(){
+    var pos=window.scrollY+140;
+    var idx=-1;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i]&&targets[i].offsetTop<=pos){idx=i;}
+    }
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"51今日爆料",
+  "inLanguage":"zh-CN",
+  "description":"每日大赛爆料条目、赛程规则与争议裁决的整理与核对。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"每日大赛的暂停计时为什么会被申诉？",
+      "acceptedAnswer":{"@type":"Answer","text":"第9版规则要求暂停时长精确到秒，并规定暂停期间不计入有效对局时间。实际操作中主裁与边裁各记一份，两份记录相差数秒时就会直接影响比分。第37-04号说明里的12秒差就是这么产生的。"}
+    },
+    {
+      "@type":"Question",
+      "name":"装备检查提前到赛前45分钟，迟到一定判弃权吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"按规则手册第9版第4.2条，窗口关闭后到达检查台的参赛者按弃权处理，没有补检通道。11月6日有5人因此弃权，11月7日2人。若因场馆原因导致排队超时，可当场向裁判长登记。"}
+    },
+    {
+      "@type":"Question",
+      "name":"申诉材料需要包含哪些内容？",
+      "acceptedAnswer":{"@type":"Answer","text":"录屏、明确的时间轴标注、争议发生时的比分与局数。材料需在赛后30分钟内提交，规则复核员在5个工作时段内答复。"}
+    },
+    {
+      "@type":"Question",
+      "name":"第38赛段的报名什么时候开？",
+      "acceptedAnswer":{"@type":"Answer","text":"按赛程安排预计11月15日开放，具体时段与名额以届时的赛程公告为准。第37赛段报名在11月2日18:00关闭，共312人。"}
+    }
+  ]
+}
+</script>
+</body>
+  </html>

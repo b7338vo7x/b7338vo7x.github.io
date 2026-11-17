@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>推特网红小小绘-写真账号与内容档案</title>
+<meta name="description" content="推特网红小小绘是活跃于X平台的中文写真创作者。收录小小绘2026年秋冬新作、拍摄幕后、账号运营数据与粉丝互动记录，整理她的内容风格、更新节奏与争议回应，帮助新关注者快速了解这位创作者的作品序列。">
+<meta name="keywords" content="推特网红小小绘">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8607a'/%3E%3Cpath d='M18 46c6-4 8-12 10-18 3-8 7-10 12-10 5 0 8 4 6 9-2 6-9 8-14 9-2 5-1 8 3 8 3 0 6-2 8-4' fill='none' stroke='%23fff5f7' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --rose:#e8607a;
+  --rose-deep:#b8384f;
+  --rose-soft:#fdeef1;
+  --ink:#221a1d;
+  --ink-2:#4c3f44;
+  --ink-3:#7d6c73;
+  --line:#ecd9de;
+  --paper:#fffafb;
+  --panel:#ffffff;
+  --sand:#f7eff1;
+  --gold:#c99a3f;
+  --gold-soft:#fbf3e2;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(72,28,40,.07);
+  --shadow-lg:0 10px 30px rgba(72,28,40,.10);
+  --sp:clamp(14px,2.2vw,24px);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --ann-h:38px;
+  --head-h:62px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+  line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--rose-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px;border-radius:4px}
+.wrap{width:min(1180px,100% - 2*var(--sp));margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* 公告条 + 页头 吸顶 */
+.sticky-zone{position:sticky;top:0;z-index:60}
+.announce{
+  background:linear-gradient(90deg,#3a2229,#5a2e38 55%,#7a3a47);
+  color:#ffe9ee;font-size:13.5px;height:var(--ann-h);display:flex;align-items:center;
+}
+.announce .wrap{display:flex;gap:12px;align-items:center;overflow:hidden;white-space:nowrap}
+.announce b{color:#fff;font-weight:600}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:#ffc2cf;flex:none}
+.announce .more{margin-left:auto;color:#ffd3dd;flex:none}
+.announce .more:hover{color:#fff}
+.site-head{background:rgba(255,250,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);height:var(--head-h);box-shadow:0 1px 0 rgba(72,28,40,.04)}
+.site-head .wrap{height:100%;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-name{font-size:18px;font-weight:700;letter-spacing:.02em;color:var(--ink)}
+.nav-main{display:flex;gap:2px;margin-left:6px;overflow-x:auto;scrollbar-width:none}
+.nav-main::-webkit-scrollbar{display:none}
+.nav-main a{
+  padding:8px 11px;border-radius:99px;color:var(--ink-2);font-size:14.5px;white-space:nowrap;
+  transition:background .15s,color .15s;
+}
+.nav-main a:hover{background:var(--rose-soft);color:var(--rose-deep);text-decoration:none}
+.nav-main a.active{background:var(--rose-soft);color:var(--rose-deep);font-weight:600}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+.search{
+  display:flex;align-items:center;gap:6px;background:var(--sand);border:1px solid var(--line);
+  border-radius:99px;padding:4px 6px 4px 12px;
+}
+.search input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:150px;color:var(--ink);padding:3px 0;
+}
+.search input:focus{outline:none}
+.search button{
+  border:0;background:var(--rose);color:#fff;font:inherit;font-size:13px;padding:5px 12px;
+  border-radius:99px;cursor:pointer;
+}
+.search button:hover{background:var(--rose-deep)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:var(--panel);border-radius:10px;
+  width:40px;height:38px;align-items:center;justify-content:center;cursor:pointer;flex:none;
+}
+.menu-btn svg{width:20px;height:20px;stroke:var(--ink-2)}
+.search-feedback{
+  display:none;font-size:13px;color:var(--rose-deep);background:var(--rose-soft);
+  border-radius:8px;padding:6px 12px;margin:8px 0 0;
+}
+.search-feedback.show{display:block}
+
+/* 锚点偏移 */
+[id]{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 16px)}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 88% -10%,#fbd6de 0%,transparent 62%),
+    radial-gradient(600px 340px at 4% 110%,#f7e6d4 0%,transparent 60%),
+    linear-gradient(180deg,#fff6f8 0%,var(--paper) 100%);
+  border-bottom:1px solid var(--line);
+  padding:clamp(28px,5vw,60px) 0 clamp(26px,4.5vw,54px);
+}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(20px,4vw,48px);align-items:center}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--rose-deep);
+  background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin-bottom:16px;
+  box-shadow:var(--shadow);
+}
+.hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--rose);display:inline-block}
+.hero h1{
+  font-size:clamp(30px,4.4vw,50px);letter-spacing:-.01em;color:var(--ink);
+  margin-bottom:14px;
+}
+.hero h1 .mark{
+  background:linear-gradient(180deg,transparent 62%,#f9c6d1 62%);padding:0 4px;border-radius:2px;
+}
+.hero-lead{font-size:clamp(15px,1.6vw,17px);color:var(--ink-2);max-width:34em;margin-bottom:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;
+  padding:10px 20px;border-radius:99px;border:1px solid transparent;cursor:pointer;
+  transition:transform .15s,box-shadow .15s,background .15s;
+}
+.btn-primary{background:var(--rose);color:#fff;box-shadow:0 6px 18px rgba(232,96,122,.28)}
+.btn-primary:hover{background:var(--rose-deep);transform:translateY(-2px);text-decoration:none}
+.btn-ghost{background:#fff;color:var(--rose-deep);border-color:var(--line)}
+.btn-ghost:hover{background:var(--rose-soft);transform:translateY(-2px);text-decoration:none}
+.hero-stats{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13.5px;color:var(--ink-3)}
+.hero-stats b{display:block;font-size:19px;color:var(--ink);font-variant-numeric:tabular-nums}
+.hero-visual{position:relative;min-height:320px}
+.hero-visual svg{width:100%;height:auto;filter:drop-shadow(0 18px 34px rgba(120,44,62,.16))}
+.hero-note{
+  position:absolute;right:6px;bottom:2px;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:8px 13px;font-size:12.5px;color:var(--ink-2);box-shadow:var(--shadow);
+  max-width:210px;line-height:1.55;
+}
+.hero-note b{color:var(--rose-deep)}
+
+/* 布局 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,3vw,40px);
+  padding:clamp(26px,4vw,48px) 0 60px;align-items:start;
+}
+.main-col{min-width:0}
+.side-col{min-width:0}
+section.block{margin-bottom:clamp(30px,4vw,52px)}
+.sec-head{display:flex;align-items:flex-end;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(20px,2.4vw,26px);letter-spacing:-.01em}
+.sec-head .sub{font-size:13.5px;color:var(--ink-3)}
+.sec-head .line{flex:1;height:1px;background:var(--line);min-width:20px;margin-bottom:8px}
+.kicker{
+  display:inline-block;font-size:12px;letter-spacing:.12em;color:var(--rose-deep);
+  font-weight:700;margin-bottom:6px;
+}
+
+/* 领域概览 分栏 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(16px,2.6vw,26px);box-shadow:var(--shadow);
+}
+.overview-cols{columns:2;column-gap:34px}
+.overview-cols p{margin:0 0 1em;break-inside:avoid}
+.overview-cols p:last-child{margin-bottom:0}
+.fact-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;
+  padding-top:16px;border-top:1px dashed var(--line);
+}
+.fact-strip div{background:var(--sand);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--ink-3)}
+.fact-strip b{display:block;font-size:17px;color:var(--ink);margin-bottom:2px}
+
+/* 精选 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pick-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s;
+}
+.pick-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.pick-card img{width:100%;height:150px;object-fit:cover}
+.pick-card .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-card h3{font-size:15.5px}
+.pick-card .meta{font-size:12.5px;color:var(--ink-3);display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.pick-card p{font-size:13.5px;color:var(--ink-2);margin:0}
+.chip{
+  display:inline-block;font-size:12px;padding:1px 9px;border-radius:99px;
+  background:var(--rose-soft);color:var(--rose-deep);border:1px solid #f6d3db;
+}
+.chip.gold{background:var(--gold-soft);color:#8a6417;border-color:#eddcba}
+
+/* 最新更新 紧凑列表 */
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.update-item{
+  display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:baseline;
+  padding:12px 16px;border-bottom:1px solid var(--line);font-size:14.5px;
+}
+.update-item:last-child{border-bottom:0}
+.update-item time{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.update-item .t{color:var(--ink)}
+.update-item .t b{font-weight:600}
+.update-item .tag{font-size:12px;color:var(--ink-3);white-space:nowrap}
+.update-item:hover{background:#fff5f7}
+
+/* 分类入口 标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:9px}
+.cat-index a{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:99px;
+  background:var(--panel);border:1px solid var(--line);font-size:14px;color:var(--ink-2);
+  transition:background .15s,color .15s,transform .15s;
+}
+.cat-index a:hover{background:var(--rose-soft);color:var(--rose-deep);text-decoration:none;transform:translateY(-2px)}
+.cat-index a span{font-size:12px;color:var(--ink-3)}
+
+/* 深度解析 */
+.deep{
+  background:linear-gradient(180deg,#fff,#fff9fa);border:1px solid var(--line);
+  border-radius:var(--radius);padding:clamp(16px,3vw,30px);box-shadow:var(--shadow);
+}
+.deep-lead{font-size:15.5px;color:var(--ink-2);border-left:3px solid var(--rose);padding-left:14px;margin-bottom:22px}
+.deep h3{font-size:18px;margin:24px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
+.deep h3:first-of-type{border-top:0;padding-top:0;margin-top:4px}
+.deep p{font-size:15px;color:var(--ink-2)}
+.checklist{list-style:none;padding:0;margin:10px 0 14px}
+.checklist li{
+  position:relative;padding:9px 12px 9px 36px;background:var(--sand);border-radius:10px;
+  margin-bottom:8px;font-size:14px;color:var(--ink-2);
+}
+.checklist li::before{
+  content:"";position:absolute;left:12px;top:15px;width:12px;height:7px;
+  border-left:2px solid var(--rose-deep);border-bottom:2px solid var(--rose-deep);transform:rotate(-45deg);
+}
+.cmp-table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0 6px;background:#fff;border-radius:10px;overflow:hidden}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.cmp-table th{background:var(--sand);font-size:13px;color:var(--ink-2);font-weight:600}
+.cmp-table td{color:var(--ink-2)}
+.quote-card{
+  border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;
+  padding:12px 16px;font-size:14.5px;color:#5d4517;margin:12px 0;
+}
+.quote-card cite{display:block;font-style:normal;font-size:12.5px;color:#8a6417;margin-top:6px}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:step;display:grid;gap:12px}
+.step{
+  position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px 14px 62px;box-shadow:var(--shadow);
+}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  position:absolute;left:16px;top:14px;font-size:20px;font-weight:700;color:var(--rose);
+  font-variant-numeric:tabular-nums;line-height:1.2;
+}
+.step h3{font-size:15.5px;margin-bottom:4px}
+.step p{font-size:14px;color:var(--ink-2);margin:0}
+.step .hint{font-size:12.5px;color:var(--ink-3);margin-top:6px}
+
+/* FAQ */
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:9px;
+  overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 42px 13px 16px;font-size:15px;font-weight:600;color:var(--ink);
+  position:relative;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--rose);font-weight:400;line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{border-bottom:1px solid var(--line);background:#fffafb}
+.faq .ans{padding:12px 16px 14px;font-size:14.5px;color:var(--ink-2)}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;font-size:14px;color:var(--ink-2);box-shadow:var(--shadow);
+}
+.comment .who{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:13px;font-weight:700;color:#fff;background:var(--rose);
+}
+.avatar.b{background:#7a8fbf}.avatar.c{background:#c99a3f}.avatar.d{background:#6fa884}
+.comment .who b{font-size:13.5px;color:var(--ink)}
+.comment .who span{font-size:12px;color:var(--ink-3)}
+.comment .target{font-size:12.5px;color:var(--rose-deep);margin-top:8px}
+.comment p{margin:0}
+.comment .stars{color:var(--gold);font-size:12.5px;letter-spacing:2px}
+
+/* 资讯 双栏列表 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.news-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;
+  display:flex;flex-direction:column;gap:5px;
+}
+.news-item time{font-size:12px;color:var(--ink-3)}
+.news-item h3{font-size:14.5px}
+.news-item p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* 推荐标签 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{
+  font-size:13.5px;padding:6px 13px;border-radius:8px;background:var(--panel);
+  border:1px solid var(--line);color:var(--ink-2);
+}
+.tag-cloud a:hover{background:var(--rose-soft);color:var(--rose-deep);text-decoration:none}
+
+/* 榜单 */
+.ranklist{display:grid;gap:9px;counter-reset:rank}
+.rank{
+  display:grid;grid-template-columns:34px 64px 1fr auto;gap:12px;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 13px 9px 9px;
+}
+.rank::before{
+  counter-increment:rank;content:counter(rank);font-size:16px;font-weight:700;color:var(--ink-3);
+  text-align:center;font-variant-numeric:tabular-nums;
+}
+.rank:nth-child(1)::before{color:var(--rose)}
+.rank img{width:64px;height:48px;object-fit:cover;border-radius:8px}
+.rank .t{font-size:14.5px;color:var(--ink);font-weight:600}
+.rank .s{font-size:12.5px;color:var(--ink-3)}
+.rank .v{font-size:13px;color:var(--rose-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 侧栏 */
+.side-stick{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 18px)}
+.side-box{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;margin-bottom:16px;box-shadow:var(--shadow);
+}
+.side-box h2{font-size:15.5px;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.side-box h2::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--rose)}
+.side-nav{display:flex;flex-direction:column;gap:2px}
+.side-nav a{
+  font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:8px;border-left:2px solid transparent;
+}
+.side-nav a:hover{background:var(--sand);text-decoration:none}
+.side-nav a.active{background:var(--rose-soft);color:var(--rose-deep);border-left-color:var(--rose);font-weight:600}
+.mini-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.mini-list li{padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.mini-list li:last-child{border-bottom:0}
+.mini-list time{display:block;font-size:12px;color:var(--ink-3)}
+.side-note{font-size:13px;color:var(--ink-3);line-height:1.7}
+.side-note b{color:var(--ink-2)}
+
+/* 页尾 */
+.site-foot{background:#2a1d22;color:#d9c7cd;padding:clamp(30px,4vw,50px) 0 22px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:clamp(18px,3vw,36px);margin-bottom:26px}
+.site-foot h2{font-size:15px;color:#fff;margin-bottom:10px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand .brand-name{color:#fff;font-size:17px}
+.site-foot p{color:#b39aa2;font-size:13.5px;margin:0 0 .6em}
+.foot-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.foot-links a{color:#d9c7cd;font-size:13.5px}
+.foot-links a:hover{color:#fff}
+.foot-bottom{
+  border-top:1px solid #44313a;padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 20px;
+  justify-content:space-between;font-size:12.5px;color:#9b838c;
+}
+.to-top{
+  position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--rose-deep);cursor:pointer;
+  box-shadow:var(--shadow-lg);display:grid;place-items:center;z-index:70;
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:20px;height:20px}
+
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .main-col{order:1}
+  .side-stick{position:static}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-visual{max-width:520px;margin-inline:auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .nav-main{
+    position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;
+    padding:10px var(--sp) 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);
+    display:none;gap:2px;max-height:70vh;overflow:auto;
+  }
+  .nav-main.open{display:flex}
+  .nav-main a{padding:10px 12px;border-radius:8px;font-size:15px}
+  .menu-btn{display:inline-flex}
+  .search input{width:110px}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .comment-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .overview-cols{columns:1}
+  .fact-strip{grid-template-columns:1fr}
+  .update-item{grid-template-columns:1fr;gap:2px}
+  .update-item .tag{display:none}
+  .head-tools .search{display:none}
+  .announce .wrap{font-size:12.5px}
+  .announce .more{display:none}
+}
+@media (max-width:520px){
+  .card-grid{grid-template-columns:1fr}
+  .rank{grid-template-columns:26px 56px 1fr;row-gap:4px}
+  .rank .v{grid-column:2 / -1}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-actions .btn{flex:1;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .pick-card:hover,.btn:hover,.cat-index a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-zone">
+  <div class="announce" aria-label="站内公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>推特网红小小绘</b> 11月5日更新 ·「冬港」第3组 12张 + 拍摄花絮</span>
+      <a class="more" href="/#latest">查看更新记录 →</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="推特网红小小绘 首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#e8607a"/>
+          <path d="M18 46c6-4 8-12 10-18 3-8 7-10 12-10 5 0 8 4 6 9-2 6-9 8-14 9-2 5-1 8 3 8 3 0 6-2 8-4" fill="none" stroke="#fff5f7" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">推特网红小小绘</span>
+      </a>
+      <nav class="nav-main" id="navMain" aria-label="主题导航">
+        <a href="/#overview">创作者概览</a>
+        <a href="/#picks">精选写真</a>
+        <a href="/#latest">更新动态</a>
+        <a href="/#cats">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">入坑指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rank">人气榜单</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search" role="search" id="searchForm" aria-label="站内搜索">
+          <label class="sr-only" for="searchInput">搜索栏目、作品或关键词</label>
+          <input id="searchInput" type="search" placeholder="搜索作品 / 栏目" autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navMain" aria-label="展开导航菜单">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div>
+        <span class="hero-tag"><i aria-hidden="true"></i> X 平台中文写真创作档案 · 更新至 2026-11-08</span>
+        <h1 id="heroTitle">推特网红<span class="mark">小小绘</span></h1>
+        <p class="hero-lead">记录一位在 X 上以自然光胶片风见长的中文写真创作者：她的作品序列、拍摄现场、账号节奏，以及围绕她的讨论里哪些是事实、哪些只是转述。内容按作品、时间与争议分层整理，适合第一次点开她主页、想先弄明白在拍什么的人。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#picks">看精选写真 →</a>
+          <a class="btn btn-ghost" href="/#guide">新关注者指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>42</b>已归档作品组</div>
+          <div><b>11月5日</b>最近一次更新</div>
+          <div><b>4年</b>X 账号活跃时长</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 360" role="img" aria-label="原创插画：手持相机的人物剪影与胶片框组合">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fbd6de"/><stop offset="1" stop-color="#f7e6d4"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e8607a"/><stop offset="1" stop-color="#b8384f"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="20" width="384" height="320" rx="26" fill="url(#g1)"/>
+          <g opacity=".5" stroke="#fff" stroke-width="1.4">
+            <path d="M46 74h328M46 122h328M46 170h328M46 218h328M46 266h328"/>
+            <path d="M80 46v268M140 46v268M200 46v268M260 46v268M320 46v268M380 46v268"/>
+          </g>
+          <g transform="translate(64,58)">
+            <rect x="0" y="34" width="182" height="112" rx="10" fill="#fff" opacity=".92"/>
+            <rect x="0" y="34" width="182" height="26" rx="10" fill="#b8384f" opacity=".9"/>
+            <circle cx="26" cy="88" r="20" fill="url(#g2)"/>
+            <circle cx="26" cy="88" r="9" fill="#fff5f7"/>
+            <rect x="54" y="66" width="112" height="8" rx="4" fill="#e6cfd5"/>
+            <rect x="54" y="82" width="88" height="8" rx="4" fill="#ecd9de"/>
+            <rect x="54" y="98" width="102" height="8" rx="4" fill="#ecd9de"/>
+            <rect x="54" y="118" width="60" height="18" rx="9" fill="#e8607a"/>
+          </g>
+          <g transform="translate(212,146)">
+            <rect x="0" y="26" width="136" height="128" rx="10" fill="#fff" opacity=".94"/>
+            <rect x="12" y="40" width="112" height="58" rx="6" fill="#f3dbe1"/>
+            <circle cx="68" cy="69" r="19" fill="#e8607a"/>
+            <circle cx="68" cy="69" r="8" fill="#fff"/>
+            <rect x="12" y="108" width="74" height="7" rx="3.5" fill="#dcc4ca"/>
+            <rect x="12" y="122" width="52" height="7" rx="3.5" fill="#e8d5da"/>
+            <rect x="96" y="108" width="28" height="21" rx="5" fill="#c99a3f"/>
+          </g>
+          <g transform="translate(286,44)">
+            <rect x="0" y="0" width="86" height="86" rx="43" fill="#fff" opacity=".8"/>
+            <path d="M28 56c8-5 10-15 12-22 3-9 8-12 14-12" fill="none" stroke="#e8607a" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <circle cx="86" cy="300" r="7" fill="#c99a3f"/>
+          <circle cx="112" cy="300" r="7" fill="#e8607a" opacity=".6"/>
+          <circle cx="138" cy="300" r="7" fill="#7a8fbf" opacity=".5"/>
+        </svg>
+        <div class="hero-note"><b>「冬港」第3组</b> 2026-11-05 · 12张 · 菲林胶片 · 拍摄花絮已同步</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <!-- 领域概览 -->
+      <section class="block" id="overview">
+        <div class="sec-head"><span class="kicker">OVERVIEW</span><h2>创作者与作品面貌</h2><span class="line"></span><span class="sub">先弄明白她在拍什么</span></div>
+        <div class="overview">
+          <div class="overview-cols">
+            <p>小小绘的 X 主号注册于 2022 年 3 月，早期是手机随手拍的城市夜景，2023 年夏天转向固定主题连载。她的作品通常按“地点 + 季节”分组，每组 8 到 16 张，配一段 200 字以内的拍摄手记，正文里会写清相机型号、胶卷规格与当天的天气。</p>
+            <p>构图偏好低机位与逆光，大量照片在下午 4 点到 6 点之间完成，这个时段的光线偏暖，阴影拉长，人物轮廓更容易和背景分开。她自己把这种风格称为“黄昏作业”，粉丝沿用这个叫法，讨论区里搜“黄昏作业”能翻出一批同题材合集。</p>
+            <p>更新频率不高，2026 年 1 月至 10 月共发布 19 组，平均每 16 天一组。10 月 20 日她在 X 上说设备送修，11 月 5 日才恢复更新，这期间只转发过两条同行作品。对想追更的人来说，把她的账号加入列表比每天刷时间线更省事。</p>
+            <p>合作方面，2026 年公开标注品牌合作的只有 3 组，分别来自胶片耗材、独立咖啡店和某小众相机包。她在合作帖里会单独标“合作”，广告内容与日常作品分开，这一点在粉丝评论里被提到过多次。</p>
+          </div>
+          <div class="fact-strip">
+            <div><b>19 组</b>2026 年 1—10 月发布作品数</div>
+            <div><b>16 天</b>平均更新间隔</div>
+            <div><b>3 组</b>公开标注的品牌合作</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选内容 -->
+      <section class="block" id="picks">
+        <div class="sec-head"><span class="kicker">PICKS</span><h2>精选写真与系列</h2><span class="line"></span><span class="sub">按组查看，不按热度排序</span></div>
+        <div class="card-grid">
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-winterport/600/320" width="600" height="320" loading="lazy" alt="黄昏港口边的逆光人物写真，暖色天空与栏杆剪影">
+            <div class="body">
+              <span class="chip">港口黄昏系列</span>
+              <h3>冬港 · 第1组</h3>
+              <p>10月18日发布，8张。拍摄地在旧码头，使用 Portra 400，人物背对夕阳。手记里写“风大，废片两张”。</p>
+              <div class="meta"><span>2026-10-18</span><span>8 张</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-filmrain/600/320" width="600" height="320" loading="lazy" alt="雨夜便利店门口的胶片风街拍，玻璃反光与霓虹">
+            <div class="body">
+              <span class="chip">雨夜街拍</span>
+              <h3>便利店屋檐下的雨</h3>
+              <p>10月29日发布，11张。全部用 35mm 手持，快门 1/30，部分画面有轻微拖影，她在评论区说这是想要的效果。</p>
+              <div class="meta"><span>2026-10-29</span><span>11 张</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-studioflat/600/320" width="600" height="320" loading="lazy" alt="窗边自然光的室内人像，浅色床单与木质窗框">
+            <div class="body">
+              <span class="chip">室内自然光</span>
+              <h3>三点半的窗</h3>
+              <p>10月7日发布，9张。室内单窗光源，没有补光。她说这是全年废片率最高的一组，最后只留了 9 张。</p>
+              <div class="meta"><span>2026-10-07</span><span>9 张</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-coffee/600/320" width="600" height="320" loading="lazy" alt="独立咖啡店门口的日常写真，木质门框与手冲咖啡">
+            <div class="body">
+              <span class="chip gold">品牌合作</span>
+              <h3>手冲与午后</h3>
+              <p>9月24日发布，6张，标注“合作”。拍摄在一家社区咖啡店，全程自然光，成片偏松弛而非摆拍。</p>
+              <div class="meta"><span>2026-09-24</span><span>6 张</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-train/600/320" width="600" height="320" loading="lazy" alt="行驶列车窗边的侧脸人像，玻璃外是模糊的田野">
+            <div class="body">
+              <span class="chip">旅途记录</span>
+              <h3>慢车经过的四个站</h3>
+              <p>9月6日发布，14张。跨城拍摄，列车内不能打灯，全部靠窗光。第 9 张因为对面乘客入镜被裁掉了半边。</p>
+              <div class="meta"><span>2026-09-06</span><span>14 张</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <img src="https://picsum.photos/seed/xxh-mirror/600/320" width="600" height="320" loading="lazy" alt="老式居民楼楼梯间的镜子自拍照，暖黄灯">
+            <div class="body">
+              <span class="chip">楼梯间自拍</span>
+              <h3>六楼到三楼之间</h3>
+              <p>8月22日发布，7张。老居民楼楼梯间，用手机延时自拍。画质不如胶片组，但被转发最多，评论区争议也最多。</p>
+              <div class="meta"><span>2026-08-22</span><span>7 张</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="latest">
+        <div class="sec-head"><span class="kicker">UPDATES</span><h2>最新更新记录</h2><span class="line"></span><span class="sub">截至 2026-11-08</span></div>
+        <div class="updates">
+          <div class="update-item"><time datetime="2026-11-05">11月5日</time><span class="t"><b>「冬港」第3组</b>发布，12张，同步拍摄花絮</span><span class="tag">作品</span></div>
+          <div class="update-item"><time datetime="2026-11-03">11月3日</time><span class="t">在 X 上回复设备维修进度，称 11 月中旬前恢复正常节奏</span><span class="tag">动态</span></div>
+          <div class="update-item"><time datetime="2026-10-29">10月29日</time><span class="t"><b>「便利店屋檐下的雨」</b>上线，评论区开放至第 60 条</span><span class="tag">作品</span></div>
+          <div class="update-item"><time datetime="2026-10-24">10月24日</time><span class="t">转发摄影师同行 @lingfoto 的夜景教程，未加评论</span><span class="tag">转发</span></div>
+          <div class="update-item"><time datetime="2026-10-20">10月20日</time><span class="t">说明相机送修，预计两周，期间停更作品只做日常回复</span><span class="tag">说明</span></div>
+          <div class="update-item"><time datetime="2026-10-18">10月18日</time><span class="t"><b>「冬港」第1组</b>发布，8张，手记附拍摄地坐标模糊化处理</span><span class="tag">作品</span></div>
+          <div class="update-item"><time datetime="2026-10-12">10月12日</time><span class="t">置顶帖更换，把旧版自我介绍改为按系列归档的索引</span><span class="tag">主页</span></div>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="cats">
+        <div class="sec-head"><span class="kicker">INDEX</span><h2>作品分类索引</h2><span class="line"></span><span class="sub">按题材与拍摄条件检索</span></div>
+        <div class="cat-index">
+          <a href="/#picks">港口黄昏系列 <span>4 组</span></a>
+          <a href="/#picks">雨夜街拍 <span>5 组</span></a>
+          <a href="/#picks">室内自然光人像 <span>6 组</span></a>
+          <a href="/#picks">列车旅途记录 <span>3 组</span></a>
+          <a href="/#picks">楼梯间自拍 <span>4 组</span></a>
+          <a href="/#picks">胶片机作品 <span>18 组</span></a>
+          <a href="/#picks">手机随手拍 <span>9 组</span></a>
+          <a href="/#picks">品牌合作内容 <span>3 组</span></a>
+          <a href="/#deep">拍摄参数与器材 <span>专题</span></a>
+          <a href="/#guide">新关注者指南 <span>入门</span></a>
+          <a href="/#faq">常见问题 <span>8 问</span></a>
+          <a href="/#rank">转发量榜单 <span>月度</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block" id="deep">
+        <div class="sec-head"><span class="kicker">DEEP DIVE</span><h2>深度解析：作品风格与争议</h2><span class="line"></span><span class="sub">可核对的结构化判断</span></div>
+        <div class="deep">
+          <p class="deep-lead">一个可以拿去反驳的判断：小小绘真正稳定的能力不是“拍得好看”，而是把拍摄条件写清楚。这一点让她在同类创作者里显得可追溯，也让她被动卷入过一次关于照片修饰的争论。</p>
+
+          <h3>判断一：她的作品可核对性来自手记，不来自成片</h3>
+          <p>2026 年 10 月 18 日发布的「冬港」第1组，手记写明相机为 Pentax K1000、胶卷 Portra 400、拍摄时间 16:40—17:50、天气多云。这些参数让读者能复现大致条件。对比 8 月 22 日的楼梯间自拍组，手记只写“手机拍的，没记参数”，那组的可核对信息就少了七成。</p>
+          <ul class="checklist">
+            <li>10月18日组：器材、胶卷、时段、天气四项齐全，废片数也写了（2张）。</li>
+            <li>10月7日组：写清室内单窗光源、无补光，废片率称“全年最高”，未给具体数量。</li>
+            <li>8月22日组：仅写设备类型与拍摄地点，无时段与参数。</li>
+            <li>9月6日组：写了列车内限制与裁切原因，属于拍摄条件说明而非参数。</li>
+          </ul>
+          <p>手记越完整，讨论越容易落在具体条件上。10 月 18 日组下面有 30 多条评论在问胶片冲扫店，而不是泛泛夸好看。</p>
+
+          <h3>判断二：8 月楼梯间组的争议，事实与转述要分开</h3>
+          <p>8 月 23 日，一个 1.2 万粉丝的摄影账号发帖称这组照片“皮肤质感不真实，疑似重度磨皮”，帖子里配了局部放大图。这是转述与推测，不是事实。小小绘 8 月 24 日在评论区回应，原文：“手机自带的自动模式，磨皮是机内算法，我没另外修。”这是她的回应，同样不能直接等同于事实。</p>
+          <table class="cmp-table">
+            <caption class="sr-only">楼梯间自拍组争议信息分层</caption>
+            <thead><tr><th>信息类型</th><th>内容</th><th>可核对程度</th></tr></thead>
+            <tbody>
+              <tr><td>事实</td><td>该组 7 张照片均由手机拍摄，发布日为 8 月 22 日</td><td>高，帖子可查</td></tr>
+              <tr><td>事实</td><td>局部放大图显示皮肤纹理弱于同账号胶片组</td><td>中，取决于原图是否压缩</td></tr>
+              <tr><td>转述</td><td>摄影账号称“疑似重度磨皮”</td><td>低，属他人判断</td></tr>
+              <tr><td>回应</td><td>小小绘称磨皮来自机内自动算法</td><td>中，无法独立验证</td></tr>
+              <tr><td>推测</td><td>部分评论认为她“故意用手机降低标准”</td><td>低，无证据</td></tr>
+            </tbody>
+          </table>
+          <p>争论持续了大约四天，8 月 28 日后基本平息。值得记的是，她后来在 9 月 6 日那组的手记里主动补了一句“这组没开机内美颜”，等于用后续动作回应了前面的质疑。</p>
+
+          <h3>判断三：更新节奏变慢，与设备状况相关而非转向</h3>
+          <p>2026 年上半年，她平均每 12 天更新一组；7 月之后拉长到每 20 天。10 月 20 日的维修说明提供了一种解释。截至 11 月 8 日，11 月只更新了一组，和 2025 年同期（三组）差距明显。把这段变化读成“准备退圈”是推测，读成“设备空窗期”更贴近已公开信息。</p>
+          <div class="quote-card">
+            “相机送修，估计两周，这段时间只回消息不发作品。想看的先把旧的翻一翻。”
+            <cite>—— 小小绘，X 平台，2026-10-20</cite>
+          </div>
+
+          <h3>判断四：合作内容克制，但标注方式并不统一</h3>
+          <p>3 组合作里，9 月 24 日咖啡店那组在正文首行写“合作”，3 月 15 日胶片耗材那组只在标签里写“合作”，5 月 8 日相机包那组写的是“品牌寄送”。三种写法并存，说明她没有一个固定模板。对读者来说，标签比正文更容易漏看。</p>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide">
+        <div class="sec-head"><span class="kicker">GUIDE</span><h2>新关注者体验指南</h2><span class="line"></span><span class="sub">四步看完主要作品</span></div>
+        <div class="steps">
+          <div class="step">
+            <h3>先看置顶索引，不要从最新一条开始刷</h3>
+            <p>10 月 12 日更换的置顶帖按系列列出了全部 42 组作品，带日期和组名。从最新往下翻容易只看到设备维修期的稀疏内容。</p>
+            <p class="hint">置顶帖第 2 条是器材清单，想对照参数的可先存下来。</p>
+          </div>
+          <div class="step">
+            <h3>按“系列”看不按“单张”看</h3>
+            <p>每组 6 到 16 张，单张拆开看会丢掉手记里的条件说明。港口黄昏系列 4 组连起来看，能看出她在同一地点不同天气下的取舍。</p>
+            <p class="hint">系列名以手记首句为准，评论区常有人用简称，容易对不上。</p>
+          </div>
+          <div class="step">
+            <h3>评论区和转发区信息不一样</h3>
+            <p>她本人的补充多在评论区，比如 10 月 29 日那组的拖影说明。转发区的讨论更多来自同行，容易出现参数争论。</p>
+            <p class="hint">争议组（如 8 月 22 日）建议先看原帖再看讨论，顺序反了容易被带跑。</p>
+          </div>
+          <div class="step">
+            <h3>合作内容单独标记着看</h3>
+            <p>3 组合作内容分布在 3 月、5 月、9 月。合作帖的成片更整齐，日常帖更松弛，两者拍摄目的不同，不必放在一起比质量。</p>
+            <p class="hint">标签写法有三种，见深度解析第四节的对照。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq">
+        <div class="sec-head"><span class="kicker">FAQ</span><h2>常见问题</h2><span class="line"></span><span class="sub">八问八答</span></div>
+        <div class="faq">
+          <details>
+            <summary>小小绘用什么相机和胶卷？</summary>
+            <div class="ans"><p>公开手记里出现最多的是 Pentax K1000 配 Portra 400，2026 年 10 月 18 日那组明确写了这套组合。她也用过一台 35mm 便携机拍雨夜组，型号未标注。手机拍摄集中在楼梯间自拍组，具体机型没写。</p></div>
+          </details>
+          <details>
+            <summary>港口黄昏系列一共几组？</summary>
+            <div class="ans"><p>目前已发布 4 组，分别是 6 月 2 日、8 月 11 日、10 月 18 日和 11 月 5 日。每组都在同一片旧码头，但天气与时段不同，10 月 18 日那组是唯一写明废片数量的。</p></div>
+          </details>
+          <details>
+            <summary>8 月楼梯间自拍的磨皮争议是怎么回事？</summary>
+            <div class="ans"><p>8 月 23 日有摄影账号发帖质疑皮肤质感，配了局部放大图。她在 8 月 24 日回应说是手机机内自动算法，没有额外修图。这件事没有第三方验证，讨论在 8 月 28 日后基本停止。</p></div>
+          </details>
+          <details>
+            <summary>她多久更新一次？</summary>
+            <div class="ans"><p>2026 年上半年平均 12 天一组，7 月之后拉长到 20 天左右。10 月 20 日到 11 月 5 日因相机维修停更，11 月 5 日恢复。追更建议用 X 的列表功能，不必每天刷。</p></div>
+          </details>
+          <details>
+            <summary>哪些内容是品牌合作？</summary>
+            <div class="ans"><p>2026 年公开标注的有 3 组：3 月 15 日胶片耗材、5 月 8 日相机包、9 月 24 日社区咖啡店。三组的标注位置不同，分别在标签、正文开头和正文首行。</p></div>
+          </details>
+          <details>
+            <summary>雨夜街拍的拖影是失误吗？</summary>
+            <div class="ans"><p>不是。10 月 29 日那组用 35mm 手持、快门 1/30 拍摄，她在评论区说轻微拖影是想要的效果。这组共 11 张，其中约 3 张拖影较明显。</p></div>
+          </details>
+          <details>
+            <summary>拍摄地点会公开吗？</summary>
+            <div class="ans"><p>不完整公开。10 月 18 日那组对手记里的坐标做了模糊化处理，只写“旧码头”。部分地点可在评论区找到大致范围，但没有精确地址。</p></div>
+          </details>
+          <details>
+            <summary>除了 X 还能在哪里看她的作品？</summary>
+            <div class="ans"><p>目前公开渠道只有 X 主号。她没有在其他平台开设同步账号，也没有公开的个人站。第三方搬运号的图片常有压缩，参数信息不完整。</p></div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="block" id="comments">
+        <div class="sec-head"><span class="kicker">VOICES</span><h2>关注者评论摘录</h2><span class="line"></span><span class="sub">含中性与非正面评价</span></div>
+        <div class="comment-grid">
+          <div class="comment">
+            <div class="who"><span class="avatar">阿</span><b>阿澈</b><span>· 10月19日</span></div>
+            <p>冬港第1组第 5 张的栏杆阴影切在腰线上，位置太巧了。冲着这张去翻了整组，8 张里这张最好。</p>
+            <div class="target">指向：冬港 · 第1组</div>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar b">林</span><b>林间小径</b><span>· 10月30日</span></div>
+            <p>雨夜那组的拖影我不太买账，第 4 张已经糊到看不清脸。想要氛围可以理解，但 11 张里糊 4 张有点多。</p>
+            <div class="target">指向：便利店屋檐下的雨</div>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar c">老</span><b>老周拍胶片</b><span>· 10月21日</span></div>
+            <p>手记写得比照片还认真。Portra 400 在阴天确实容易发灰，她写“废片两张”应该是实话。</p>
+            <div class="target">指向：拍摄手记习惯</div>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar d">团</span><b>团子不吃鱼</b><span>· 8月25日</span></div>
+            <p>楼梯间那组被吵得有点过头了。手机自动模式本来就会磨，我自己的手机也这样，拿去放大看真没必要。</p>
+            <div class="target">指向：六楼到三楼之间</div>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">K</span><b>Kite_07</b><span>· 9月25日</span></div>
+            <p>咖啡店那组看着舒服，但说实话和平时拍的差别不大，合作痕迹不明显，也算好事。</p>
+            <div class="target">指向：手冲与午后</div>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar b">夏</span><b>夏天穿毛衣</b><span>· 11月6日</span></div>
+            <p>等了半个月终于更了，但这组颜色偏冷，和前面港口那几组的暖调接不上，看着有点跳。</p>
+            <div class="target">指向：冬港 · 第3组</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news">
+        <div class="sec-head"><span class="kicker">NEWS</span><h2>相关信息与同行动态</h2><span class="line"></span><span class="sub">只记可查来源</span></div>
+        <div class="news-grid">
+          <article class="news-item"><time datetime="2026-11-03">11月3日</time><h3>相机维修进度更新</h3><p>她在 X 上回复读者，称送修的是主力胶片机，预计 11 月中旬前恢复原有更新节奏。这条回复未单独成帖。</p></article>
+          <article class="news-item"><time datetime="2026-10-24">10月24日</time><h3>转发同行夜景教程</h3><p>转发 @lingfoto 的夜景曝光教程，未加任何评论。该教程讲的是手持 1/30 快门与呼吸控制，与她 10 月 29 日那组参数吻合。</p></article>
+          <article class="news-item"><time datetime="2026-10-12">10月12日</time><h3>置顶帖改为作品索引</h3><p>旧版自我介绍换成按系列归档的索引，列出 42 组作品与日期。这是她账号结构上的一次明显调整。</p></article>
+          <article class="news-item"><time datetime="2026-09-24">9月24日</time><h3>社区咖啡店合作上线</h3><p>该组 6 张，全部自然光拍摄。咖啡店在帖中标注为社区店，未提供具体地址。</p></article>
+          <article class="news-item"><time datetime="2026-09-06">9月6日</time><h3>列车组补写设备说明</h3><p>手记中加了一句“这组没开机内美颜”，被部分读者视为对 8 月争议的间接回应。</p></article>
+          <article class="news-item"><time datetime="2026-08-28">8月28日</time><h3>磨皮讨论趋于停止</h3><p>摄影账号原帖不再更新，评论区最后一条为 8 月 28 日。此后无公开跟进说明。</p></article>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="related">
+        <div class="sec-head"><span class="kicker">RELATED</span><h2>相关推荐标签</h2><span class="line"></span><span class="sub">长尾检索词</span></div>
+        <div class="tag-cloud">
+          <a href="/#picks">小小绘冬港系列</a>
+          <a href="/#picks">雨夜街拍胶片参数</a>
+          <a href="/#picks">室内单窗自然光人像</a>
+          <a href="/#picks">列车窗边写真</a>
+          <a href="/#picks">楼梯间手机自拍</a>
+          <a href="/#deep">Portra 400 阴天表现</a>
+          <a href="/#deep">手机机内磨皮争议</a>
+          <a href="/#guide">X 平台追更方法</a>
+          <a href="/#guide">胶片机维修记录</a>
+          <a href="/#faq">品牌合作标注方式</a>
+        </div>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="block" id="rank">
+        <div class="sec-head"><span class="kicker">RANKING</span><h2>2026 年 10 月转发量榜单</h2><span class="line"></span><span class="sub">按单组转发数排</span></div>
+        <div class="ranklist">
+          <div class="rank">
+            <img src="https://picsum.photos/seed/xxh-rankrain/160/120" width="160" height="120" loading="lazy" alt="雨夜便利店屋檐的缩略图">
+            <div><div class="t">便利店屋檐下的雨</div><div class="s">10月29日 · 11张 · 35mm手持</div></div>
+            <span class="v">1.8 千转</span>
+          </div>
+          <div class="rank">
+            <img src="https://picsum.photos/seed/xxh-rankport/160/120" width="160" height="120" loading="lazy" alt="旧码头黄昏逆光缩略图">
+            <div><div class="t">冬港 · 第1组</div><div class="s">10月18日 · 8张 · Portra 400</div></div>
+            <span class="v">1.2 千转</span>
+          </div>
+          <div class="rank">
+            <img src="https://picsum.photos/seed/xxh-ranknoise/160/120" width="160" height="120" loading="lazy" alt="楼梯间镜子自拍缩略图">
+            <div><div class="t">六楼到三楼之间</div><div class="s">8月22日 · 7张 · 争议组</div></div>
+            <span class="v">940 转</span>
+          </div>
+          <div class="rank">
+            <img src="https://picsum.photos/seed/xxh-rankwin/160/120" width="160" height="120" loading="lazy" alt="窗边自然光室内人像缩略图">
+            <div><div class="t">三点半的窗</div><div class="s">10月7日 · 9张 · 废片率最高</div></div>
+            <span class="v">610 转</span>
+          </div>
+          <div class="rank">
+            <img src="https://picsum.photos/seed/xxh-ranktrain/160/120" width="160" height="120" loading="lazy" alt="列车窗边侧脸缩略图">
+            <div><div class="t">慢车经过的四个站</div><div class="s">9月6日 · 14张 · 补写设备说明</div></div>
+            <span class="v">520 转</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏导航与补充信息">
+      <div class="side-stick">
+        <div class="side-box">
+          <h2>栏目导航</h2>
+          <nav class="side-nav" id="sideNav" aria-label="侧栏栏目导航">
+            <a href="/#overview">创作者概览</a>
+            <a href="/#picks">精选写真</a>
+            <a href="/#latest">更新记录</a>
+            <a href="/#cats">分类索引</a>
+            <a href="/#deep">深度解析</a>
+            <a href="/#guide">体验指南</a>
+            <a href="/#faq">常见问题</a>
+            <a href="/#comments">评论摘录</a>
+            <a href="/#news">相关信息</a>
+            <a href="/#rank">转发榜单</a>
+          </nav>
+        </div>
+        <div class="side-box">
+          <h2>近期时间线</h2>
+          <ul class="mini-list">
+            <li><time datetime="2026-11-05">11月5日</time>「冬港」第3组 12张</li>
+            <li><time datetime="2026-11-03">11月3日</time>回复维修进度</li>
+            <li><time datetime="2026-10-29">10月29日</time>雨夜街拍 11张</li>
+            <li><time datetime="2026-10-20">10月20日</time>相机送修说明</li>
+            <li><time datetime="2026-10-12">10月12日</time>置顶帖换索引</li>
+          </ul>
+        </div>
+        <div class="side-box">
+          <h2>数据说明</h2>
+          <p class="side-note">本页所有日期、组数、转发量与参数均按 <b>2026-11-08</b> 之前公开可查的帖子整理。示例条目用于说明结构，转发量取整到十位。涉及争议的部分已标注为事实、转述、回应或推测，未做二次判断。</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site-foot" id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#e8607a"/><path d="M18 46c6-4 8-12 10-18 3-8 7-10 12-10 5 0 8 4 6 9-2 6-9 8-14 9-2 5-1 8 3 8 3 0 6-2 8-4" fill="none" stroke="#fff5f7" stroke-width="5" stroke-linecap="round"/></svg>
+          <span class="brand-name">推特网红小小绘</span>
+        </div>
+        <p>一位中文写真创作者的作品与拍摄条件档案，按系列、时间与争议分层整理，供读者按需检索。</p>
+        <p>页面内容更新于 2026-11-08，对应正文可核对的更新项为 11 月 3 日维修回复、11 月 5 日冬港第3组。</p>
+      </div>
+      <div>
+        <h2>作品</h2>
+        <ul class="foot-links">
+          <li><a href="/#picks">港口黄昏系列</a></li>
+          <li><a href="/#picks">雨夜街拍</a></li>
+          <li><a href="/#picks">室内自然光人像</a></li>
+          <li><a href="/#picks">列车旅途记录</a></li>
+          <li><a href="/#picks">楼梯间自拍</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>阅读</h2>
+        <ul class="foot-links">
+          <li><a href="/#overview">创作者概览</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#rank">转发榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>互动</h2>
+        <ul class="foot-links">
+          <li><a href="/#comments">评论摘录</a></li>
+          <li><a href="/#news">相关信息</a></li>
+          <li><a href="/#related">推荐标签</a></li>
+          <li><a href="/#latest">更新记录</a></li>
+          <li><a href="/#cats">分类索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页为示例性整理，非官方账号页面。作品版权归原创作者所有。</span>
+      <span>© 2026 推特网红小小绘 内容档案 · 示例数据说明见侧栏与页尾</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"推特网红小小绘",
+  "inLanguage":"zh-CN",
+  "description":"推特网红小小绘的写真作品、拍摄参数、更新记录与争议分层的整理档案。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"小小绘用什么相机和胶卷？","acceptedAnswer":{"@type":"Answer","text":"公开手记里出现最多的是 Pentax K1000 配 Portra 400，2026年10月18日那组明确写了这套组合。雨夜组用过一台35mm便携机，型号未标注。手机拍摄集中在楼梯间自拍组。"}},
+    {"@type":"Question","name":"港口黄昏系列一共几组？","acceptedAnswer":{"@type":"Answer","text":"目前已发布4组，分别在6月2日、8月11日、10月18日和11月5日，都在同一片旧码头，天气与时段不同。"}},
+    {"@type":"Question","name":"8月楼梯间自拍的磨皮争议是怎么回事？","acceptedAnswer":{"@type":"Answer","text":"8月23日有摄影账号发帖质疑皮肤质感，配了局部放大图。她在8月24日回应称是手机机内自动算法，没有额外修图。此事无第三方验证，8月28日后讨论基本停止。"}},
+    {"@type":"Question","name":"她多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"2026年上半年平均12天一组，7月后拉长到20天左右。10月20日至11月5日因相机维修停更，11月5日恢复。"}},
+    {"@type":"Question","name":"哪些内容是品牌合作？","acceptedAnswer":{"@type":"Answer","text":"2026年公开标注的3组为3月15日胶片耗材、5月8日相机包、9月24日社区咖啡店，标注位置分别在不同区块。"}},
+    {"@type":"Question","name":"雨夜街拍的拖影是失误吗？","acceptedAnswer":{"@type":"Answer","text":"不是。10月29日那组用35mm手持、快门1/30拍摄，她在评论区说轻微拖影是想要的效果，11张里约3张拖影明显。"}},
+    {"@type":"Question","name":"拍摄地点会公开吗？","acceptedAnswer":{"@type":"Answer","text":"不完整公开。10月18日那组对手记里的坐标做了模糊化处理，只写旧码头，没有精确地址。"}},
+    {"@type":"Question","name":"除了 X 还能在哪里看她的作品？","acceptedAnswer":{"@type":"Answer","text":"目前公开渠道只有X主号，没有其他平台的同步账号，也没有公开的个人站。第三方搬运号的图片常有压缩。"}}
+  ]
+}
+</script>
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('navMain');
+  function closeNav(){
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    menuBtn.setAttribute('aria-label','展开导航菜单');
+  }
+  menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.setAttribute('aria-label',open?'收起导航菜单':'展开导航菜单');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){closeNav();}
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeNav();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.contains(e.target)&&!menuBtn.contains(e.target)){closeNav();}
+  });
+
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>420){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var secs=links.map(function(a){
+    var id=a.getAttribute('href').slice(2);
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.classList.remove('active');});
+          var id=en.target.id;
+          links.forEach(function(l){
+            if(l.getAttribute('href')==='/# '+id){l.classList.add('active');}
+          });
+          var target='/# '+id;
+          links.forEach(function(l){
+            if(l.getAttribute('href')==='/'+'#'+id){l.classList.add('active');}
+          });
+        }
+      });
+    },{rootMargin:'-30% 0px -60% 0px',threshold:0});
+    secs.forEach(function(s){io.observe(s);});
+  }
+
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('searchInput');
+  var feedback=document.createElement('p');
+  feedback.className='search-feedback';
+  feedback.setAttribute('role','status');
+  form.parentNode.parentNode.insertBefore(feedback,form.parentNode.nextSibling);
+
+  var index=[];
+  document.querySelectorAll('main section.block').forEach(function(sec){
+    var h2=sec.querySelector('h2');
+    if(!h2) return;
+    index.push({text:h2.textContent+' '+sec.id,el:sec});
+    sec.querySelectorAll('h3').forEach(function(h3){
+      index.push({text:h3.textContent,el:h3});
+    });
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var q=input.value.trim();
+    feedback.classList.remove('show');
+    if(!q){return;}
+    var hit=null;
+    for(var i=0;i<index.length;i++){
+      if(index[i].text.indexOf(q)!==-1){hit=index[i];break;}
+    }
+    if(hit){
+      feedback.textContent='找到相关内容：'+hit.text+'，已为你跳转。';
+      feedback.classList.add('show');
+      var sec=hit.el.closest('section.block')||hit.el;
+      sec.scrollIntoView({behavior:'smooth',block:'start'});
+    }else{
+      feedback.textContent='没有找到「'+q+'」相关条目。可试试“冬港”“雨夜街拍”“磨皮争议”或“Portra 400”。';
+      feedback.classList.add('show');
+    }
+  });
+})();
+</script>
+</body>
+                                                                                                                                                      </html>
